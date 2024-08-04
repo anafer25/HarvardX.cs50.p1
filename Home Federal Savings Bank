@@ -1,0 +1,15 @@
+
+# User input: greeting
+greet = input("Greeting: ").casefold().strip()
+
+# Check if greet is the word 'hello'
+if "hello" in greet:
+    print("$0")
+
+# Check if greet starts with letter 'h'
+elif "h" == greet[0]:
+    print("$20")
+
+# Print $100 for any other input
+else:
+    print("$100")
