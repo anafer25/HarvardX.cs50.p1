@@ -1,0 +1,22 @@
+
+# User input
+
+answer = input("What is the Answer to the Great Question of Life, the Universe, and Everything? ")
+
+
+
+# Correct Answer: respond 'yes'
+
+if answer == str("42"):                                    # the number in this case should be a string
+    print("Yes")
+elif answer.casefold().strip() == "forty-two":             # enable upper case sensitivity
+    print("Yes")
+elif answer.casefold().strip() == "forty two":
+    print("Yes")
+
+
+
+# Incorrect Answer: respond 'no'
+
+else:
+    print("No")
