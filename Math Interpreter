@@ -1,0 +1,22 @@
+# User inputs the mathematical expression:
+x, y, z = input("Expression: ").split()
+
+# x and z are integers
+x = float(x)
+z = float(z)
+
+# y is +, -, *, or /
+match y:
+    case "+":
+        print(x + z)
+        # pattern 1: y is '+'
+    case "-":
+        print(x - z)
+        # pattern 2: y is '-'
+    case "*":
+        print(x * z)
+        # pattern 3: y is '*'
+    case "/":
+        print(x / z)
+        # pattern 4: y is '/'
+

@@ -1,0 +1,28 @@
+
+def main():
+    answer = input("What time is it? ")
+    time = convert(answer) # the convert function is called but defined later
+    # 'answer' is the argument and stores the returned value in the variable 'time'
+
+    # Breakfast is between 7:00 and 8:00
+    if 7 <= time <= 8:
+        print("It's breakfast time!")
+    # Lunch is between 12:00 and 13:00
+    if 12 <= time <= 13:
+        print("It's lunch time!")
+    # Dinner is between 18:00 and 19:00
+    if 18 <= time <= 19:
+        print("It's dinner time!")
+
+def convert(time):
+    # Set a variable for the hours and the minutes
+    hours, minutes = time.split(":")
+    # Transform the minutes into a fraction of 1 hour
+    newMin = float(minutes) / 60
+    # Add this fractional hour to the hours to get a single floating number to represent time
+    floatTime = float(hours) + newMin
+    # Return the result to the main function
+    return floatTime
+
+if __name__ == "__main__":
+    main()
